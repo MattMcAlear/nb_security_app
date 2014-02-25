@@ -64,7 +64,7 @@ var ninas_eyes_short_name = "Nina\'s Eyes";
 // The host where we'll deploy our apps- replace this with yours
 // If you use Heroku, don't forget to heroku ps:scale web=1 or else you'll receive an error on visiting the app.  
 // (Not that the front-end of the app is important in this case, but if you see an error you'll know why)
-var HOSTNAME = "https://quickstarts-helloninja.herokuapp.com/";
+var HOSTNAME = "http://nb-app.herokuapp.com/";
 
 // Transitional temperatures.  We use two to avoid hysteresis
 var transitional_temperature_on = 23.0;
@@ -79,7 +79,7 @@ var socket_mode = 'off'; // Cache the socket's state so we don't flood the airwa
 var ninjaBlocks = require('ninja-blocks');
 
 // Instantiate a ninja object with your API token from https://a.ninja.is/hacking
-var ninja = ninjaBlocks.app({user_access_token:"muOnSd6ofxcZ7CoC7jZmyVgM7mlTm4QutF7YTvrw"}); // This one is long revoked.
+var ninja = ninjaBlocks.app({user_access_token:"orm7QMe07zPcqL9gwYEiFhfQra1uZmYmKF3ROe2m4o"}); // This one is long revoked.
 
 // Import Underscore
 var _ = require('underscore');
