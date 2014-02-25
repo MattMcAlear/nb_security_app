@@ -1,0 +1,21 @@
+{
+  "name": "nbApp",
+  "version": "0.0.1",
+  "description": "Ninja Block App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattMcAlear/nb_security_app.git"
+  },
+  "keywords": [
+    "Ninja",
+    "Block",
+    "App"
+  ],
+  "author": "Matt McAlear",
+  "license": "MIT",
+  "dependencies": {}
+}
