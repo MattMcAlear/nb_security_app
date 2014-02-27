@@ -6,6 +6,7 @@
  * published by the Free Software Foundation.
  */
 
+/*
 // quickstarts-helloninja
 
 // Code to accompany http://docs.ninja.is/quickstarts/bootcamp/helloninja.html
@@ -41,8 +42,10 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-//app.get('/', routes.index);
-//app.get('/users', user.list);
+console.log(routes);
+
+app.get('/', routes.index);
+app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
@@ -271,3 +274,30 @@ function updateEyes(mode) {
   }
 
 }
+*/
+
+
+// Include our underscore and ninja-blocks libraries
+var _ = require('underscore');
+
+var ninjaBlocks = require('ninja-blocks');
+
+// Instantiate a ninja object with your API token from https://a.ninja.is/hacking
+var ninja = ninjaBlocks.app({user_access_token:"orm7QMe07zPcqL9gwYEiFhfQra1uZmYmKF3ROe2m4o"});
+
+// Get the most recent temperature reading from all temperature sensors
+ninja.devices({ device_type: 'temperature' }, function(err, devices) {
+    _.each(devices, function(device,guid){
+        ninja.device(guid).last_heartbeat(function(err, data) { 
+        	if(err){
+	        	console.log(err);
+        	}else{
+        		if(typeof data.DA == 'undefined'){
+	        		console.log(device.shortName+' N/A \n');
+        		}else{
+	        		console.log(device.shortName+' is '+data.DA+'C \n');
+        		}
+        	}
+        })
+    })
+});
