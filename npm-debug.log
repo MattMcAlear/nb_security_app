@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '.route', '--save' ]
+2 info using npm@1.1.32
+3 info using node@v0.8.0
+4 verbose config file /Users/Matt/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose read json /Applications/XAMPP/xamppfiles/htdocs/heroku/package.json
+8 verbose read json /Applications/XAMPP/xamppfiles/htdocs/heroku/node_modules/express/package.json
+9 verbose read json /Applications/XAMPP/xamppfiles/htdocs/heroku/node_modules/ninja-blocks/package.json
+10 verbose read json /Applications/XAMPP/xamppfiles/htdocs/heroku/node_modules/routes/package.json
+11 verbose read json /Applications/XAMPP/xamppfiles/htdocs/heroku/node_modules/stylus/package.json
+12 verbose read json /Applications/XAMPP/xamppfiles/htdocs/heroku/node_modules/underscore/package.json
+13 verbose from cache /Applications/XAMPP/xamppfiles/htdocs/heroku/package.json
+14 verbose readDependencies using package.json deps
+15 verbose cache add [ '.route', null ]
+16 silly cache add name=undefined spec=".route" args=[".route",null]
+17 verbose parsed url { pathname: '.route', path: '.route', href: '.route' }
+18 error addLocal Could not install .route
+19 error Error: ENOENT, stat '.route'
+19 error  { [Error: ENOENT, stat '.route'] errno: 34, code: 'ENOENT', path: '.route' }
+20 error You may report this log at:
+20 error     <http://github.com/isaacs/npm/issues>
+20 error or email it to:
+20 error     <npm-@googlegroups.com>
+21 error System Darwin 13.0.0
+22 error command "node" "/usr/local/bin/npm" "install" ".route" "--save"
+23 error cwd /Applications/XAMPP/xamppfiles/htdocs/heroku
+24 error node -v v0.8.0
+25 error npm -v 1.1.32
+26 error path .route
+27 error code ENOENT
+28 error message ENOENT, stat '.route'
+29 error errno 34
+30 error 34 errno
+31 verbose exit [ 34, true ]
